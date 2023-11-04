@@ -6,9 +6,9 @@ connect();
 
 export async function POST(request:NextRequest){
     try {
-        const reqBdoy = await request.json();
-        const {token} = reqBdoy;
-        console.log(token);
+        const reqBody = await request.json();
+        const {token} = reqBody;
+        // console.log(token);
 
         const user = await User.findOne({
             verifyToken: token,
